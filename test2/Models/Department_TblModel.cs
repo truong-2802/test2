@@ -10,6 +10,6 @@ namespace test2.Models
         public string Location { get; set; }
         public double Number_of { get; set; }
         public string Personals { get; set; }
-        public string Employee_TblId { get; set; }
+        public int Employee_TblId { get; set; }
     }
 }

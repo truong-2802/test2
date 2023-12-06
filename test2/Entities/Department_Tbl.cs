@@ -20,7 +20,7 @@ namespace test2.Entities
         [Required]
         public string Personals { get; set; }
 
-        public string Employee_TblId { get; set; }
+        public int Employee_TblId { get; set; }
 
         [ForeignKey("Employee_TblId")]
         public Employee_Tbl Employee_Tbl { get; set; }

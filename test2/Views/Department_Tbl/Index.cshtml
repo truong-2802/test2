@@ -2,12 +2,18 @@
 @{
 }
 <div class="container">
-    <h1>Category</h1>
+    <h1>Department_Tbl</h1>
     <a class="text-primary" asp-controller="Department_Tbl" asp-action="Create" type="button" class="btn btn-success">Create a Department_Tbl</a>
     <table class="table table-bordered table-striped">
         <thead>
         <th>ID</th>
-        <th>Name</th>
+        <th>Department_name</th>
+        <th>Department_code</th>
+        <th>Location</th>
+        <th>Number_of</th>
+        <th>Personals</th>
+        <th>Employee_Tbl</th>
+
         </thead>
         <tbody>
             @foreach (var item in Model)

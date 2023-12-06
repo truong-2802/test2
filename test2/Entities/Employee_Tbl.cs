@@ -16,6 +16,6 @@ namespace test2.Entities
         public string Department { get; set; }
         [Required]
         public string Rank { get; set; }
-
+        public virtual ICollection<Department_Tbl> Department_Tbls { get; set; } = new List<Department_Tbl>();
     }
 }
