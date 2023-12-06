@@ -1,0 +1,25 @@
+﻿@model test2.Models.Employee_TblModel;
+@{
+}
+<div class="container">
+    @using (Html.BeginForm(FormMethod.Post))
+    { // "action" , "controller "  thêm vào trc For...
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m=>m.Id)
+        <div class="mb-3">
+            @Html.LabelFor(m => m.Department_name)
+            @Html.TextBoxFor(m => m.Department_name)
+            @Html.LabelFor(m => m.Department_code)
+            @Html.TextBoxFor(m => m.Department_code)
+            @Html.LabelFor(m => m.Location)
+            @Html.TextBoxFor(m => m.Location)
+            @Html.LabelFor(m => m.Number_of)
+            @Html.TextBoxFor(m => m.Number_of)
+            @Html.LabelFor(m => m.Personals)
+            @Html.TextBoxFor(m => m.Personals)
+            @Html.LabelFor(m => m.Employee_TblId)
+            @Html.TextBoxFor(m => m.Employee_TblId)
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    }
+</div>

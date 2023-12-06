@@ -1,0 +1,37 @@
+﻿@model List<test2.Entities.Department_Tbl>
+@{
+}
+<div class="container">
+    <h1>Category</h1>
+    <a class="text-primary" asp-controller="Department_Tbl" asp-action="Create" type="button" class="btn btn-success">Create a Department_Tbl</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <th>ID</th>
+        <th>Name</th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Department_name</td>
+                    <td>@item.Department_code</td>
+                    <td>@item.Location</td>
+                    <td>@item.Number_of</td>
+                    <td>@item.Personals</td>
+                    <td>@item.Employee_Tbl</td>
+                    <td>
+
+                        <a asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id" type="button" class="btn btn-primary">Edit</a>
+
+                        <a onclick="return confirm('Delete category @item.Department_name')"
+                           asp-controller="Category" asp-action="Delete"
+                           asp-route-id="@item.Id" type="button" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
